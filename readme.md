@@ -40,3 +40,5 @@ Note : Since PyGame Window has origin of Y on left upper corner. The Node starts
 
 https://user-images.githubusercontent.com/55183448/224559896-3334a93f-4d05-4bd0-b373-4af2589c2400.mp4
 
+## Sample Result Map
+![test_case_2_result](https://user-images.githubusercontent.com/55183448/224560414-b3815d1c-ba53-45d7-935e-da496356911d.png)
