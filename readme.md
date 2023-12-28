@@ -1,14 +1,16 @@
-# Instructions to Run the Code : 
+# Introduction
+Dijkstra Algorithm is used to find the shortest path between two nodes in a graph.
 
-1. From the extracted zip file, take out the "vinay06_Project2.py" file and open any Python IDE
-3. If Python IDE is used, please click on the run button
+# Instructions to Run the Code
+Download the source code named **dijkstra.py** from the code folder inside the repository. If Python IDE is used, please click on the run button
 Note : Before running please make sure whether these libraries are installed in the system : numpy,cv2,matplotlib,time,pygame.
 Any Library not present can be by typing below command in terminal window using pip:
+
        pip install pygame
        
-## Input Format for Two Test Cases : Click on enter after entering a value at each prompt
 
 ### Test Case 1 : 
+	# Please enter the following for each prompt once the code is executed. Press enter after each value entered
 	Enter the x-coordinate of start node
 	 6
 	Enter the y-coordinate of start node
@@ -30,10 +32,10 @@ Any Library not present can be by typing below command in terminal window using 
 
 
 
-4. Once the code is run, a few information about the code is printed on the console and the Pygame visualisation video is displayed onto the screen
+1. Once the code is run, a few information about the code is printed on the console and the Pygame visualisation video is displayed onto the screen
 Note : Since PyGame Window has origin of Y on left upper corner. The Node starts from there
-5. Close the Pygame Window once the point robot reaches goal node
-6. If Using, VSCode or Spyder you will also see a final plot of the map using Opencv and Matplotlib
+2. Close the Pygame Window once the point robot reaches goal node
+3. If Using, VSCode or Spyder you will also see a final plot of the map using Opencv and Matplotlib
 
 
 ## Dijkstra Planner
