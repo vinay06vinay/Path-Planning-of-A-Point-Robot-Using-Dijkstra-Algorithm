@@ -33,8 +33,8 @@ def obstacle_space(width,height,canvas):
             s6 = (y+0.57*x-378.62 <=0)
             #triangle
             l1 = (x-455>=0)
-            l2 = (2.01*x- y-915.21<=0)
-            l3 = (2.01*x+y-1163.58<=0)
+            l2 = (1.90*x- y-838.21<=0)
+            l3 = (1.73*x+y-1020.58<=0)
             if(r1 or r2 or (s1 and s2 and s3 and s4 and s5 and s6) or (l1 and l2 and l3)):
                 obstacle_matrix[(x,y)] = -1
                 canvas[y,x] = (0,0,255)
@@ -206,7 +206,7 @@ def back_track(child_parent_dict,start,goal):
     while(start!=current):
         optimal_list.append(child_parent_dict[current])
         current = child_parent_dict[current]
-    print(optimal_list)
+    # print(optimal_list)
     return optimal_list[::-1]
     # for key,value in child_parent_dict.items():
 '''
@@ -232,7 +232,7 @@ def visualise_pygame(optimal_path,visited):
     pygame.draw.polygon(screen, (0, 0, 150), ((235,87.5), (235, 162.5), (300, 200), (364.95, 162.5), (364.95, 87.5),(300,50)))
     pygame.draw.polygon(screen, (180, 250, 0), ((230.04,84.61), (230.04, 165.38), (300, 205.77),(369.95,165.38),  (369.95, 84.61),(300, 44.22)),5)
     pygame.draw.polygon(screen, (0, 0, 150), ((460,25), (460, 225), (510, 125)))
-    pygame.draw.polygon(screen, (180, 250, 0), ((455,3.8196), (455, 246.1803), (515.5901, 125)),5)
+    pygame.draw.polygon(screen, (180, 250, 0), ((455,10.2196), (455, 230.1803), (515.5901, 125)),5)
     pygame.display.set_caption('Path Planner Using Dijkstra')
     
     s = pygame.display.set_mode((600, 250))
@@ -268,11 +268,13 @@ start_x,start_y,goal_x,goal_y = get_input(obstacle_matrix)
 # start_x,start_y,goal_x,goal_y = 6,6,100,110
 print(f"The start node selected : {(start_x,start_y)}. The goal node selected : {(goal_x,goal_y)}")
 child_parent_dict,goal_reached,visited = dijkstra(start_x,start_y,goal_x,goal_y)
+algorithm_time = time.time()
+print(f"Time taken by Dijkstra Exploration : {algorithm_time-start_time}")
 if(goal_reached == False):
     print("No Goal Found")
 else:
     optimal_path = back_track(child_parent_dict,(start_x,start_y),(goal_x,goal_y))
-    print(optimal_path)
+    # print(optimal_path)
     end_time = time.time()  
     print(f"Time Taken By the Algorithm : {end_time - start_time} seconds")
     plot(canvas,optimal_path,visited)
