@@ -2,7 +2,7 @@
 Dijkstra Algorithm is used to find the shortest path between two nodes in a graph.
 
 # Instructions to Run the Code
-Download the source code named **dijkstra.py** from the code folder inside the repository. If Python IDE is used, please click on the run button
+Download the source code named **dijkstra.py** from the code folder inside the repository. If Python IDE is used, please click on the run button. You can also use **dijkstra_optimised.py** to examine the faster exploration and execution
 Note : Before running please make sure whether these libraries are installed in the system : numpy,cv2,matplotlib,time,pygame.
 Any Library not present can be by typing below command in terminal window using pip:
 
